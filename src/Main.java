@@ -13,6 +13,8 @@ public class Main {
         System.out.println(sumUp(1,10));
         powerOfTwo(3);
         System.out.println(powerOfTwo(3));
+        sumUpPowerOfTwo(3);
+        System.out.println(sumUpPowerOfTwo(3));
     }
 
     public static void printSomeNumbers(){
@@ -39,4 +41,14 @@ public class Main {
         }
         return b;
     }
+    public static int sumUpPowerOfTwo(int n) {
+        int sum = 0;
+        int b = 1;
+        for (int i = 0; i <= n; i++) {
+            sum = sum + b;
+            b = b*2;
+        }
+        return sum;
+    }
+
 }
