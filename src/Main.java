@@ -1,5 +1,3 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         for(int i = 0; i < 6; i++){
@@ -15,6 +13,13 @@ public class Main {
         System.out.println(powerOfTwo(3));
         sumUpPowerOfTwo(3);
         System.out.println(sumUpPowerOfTwo(3));
+        rectangleStars(10, 5);
+        System.out.println();
+        rectangleStarsSafe(10, 5);
+        System.out.println();
+        rectangleStarsSafe(0, 5); // Sollte keine Ausgabe erzeugen
+        System.out.println();
+        triangleStars(5);
     }
 
     public static void printSomeNumbers(){
@@ -50,5 +55,27 @@ public class Main {
         }
         return sum;
     }
-
+    public static void rectangleStars(int width, int height) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void rectangleStarsSafe(int width, int height) {
+        if (width > 0 && height > 0) {
+            rectangleStars(width, height);
+        } else {
+            System.out.println("Fehler: Breite und Höhe müssen größer als 0 sein!");
+        }
+    }
+    public static void triangleStars(int width) {
+        for (int i = 1; i <= width; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 }
